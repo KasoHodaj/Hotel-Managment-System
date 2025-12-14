@@ -1,0 +1,87 @@
+/* Γενικό Φόντο */
+.root {
+    -fx-background-color: #F8FAFC;
+}
+
+/* --- ΣΤΥΛ ΠΙΝΑΚΑ (Table View) --- */
+.table-view {
+    -fx-background-color: transparent; /* Διαφανές για να φαίνεται το από πίσω */
+    -fx-border-color: transparent;
+}
+
+/* Η μπάρα με τους τίτλους (Headers) */
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1 0; /* Μόνο κάτω γραμμή */
+    -fx-border-color: #E2E8F0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-padding: 15px 5px; /* Περισσότερος "αέρας" */
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #64748B; /* Το γκρι χρώμα των τίτλων */
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+/* Οι γραμμές του πίνακα (Rows) */
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: #E2E8F0; /* Απαλό γκρι διαχωριστικό */
+    -fx-border-width: 0 0 1 0;
+    -fx-pref-height: 60px; /* Ψηλότερες γραμμές όπως στο σχέδιο */
+}
+
+/* Το κελί όταν περνάς το ποντίκι από πάνω (Hover) */
+.table-row-cell:hover {
+    -fx-background-color: #F1F5F9;
+}
+
+/* Τα κείμενα μέσα στα κελιά */
+.table-cell {
+    -fx-text-fill: #334155;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER-LEFT; /* Στοίχιση αριστερά */
+    -fx-padding: 0 0 0 20px; /* Κενό αριστερά */
+    -fx-text-overrun: ELLIPSIS; /* Προσθέτει ... στο τέλος αν δεν χωράει */
+}
+
+/* Κρύψιμο της δεξιάς μπάρας του πίνακα */
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+/* --- ΣΤΥΛ ΓΙΑ ΤΟ ΜΕΝΟΥ (SIDEBAR) --- */
+
+/* Βασικό στυλ για όλα τα κουμπιά */
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #94a3b8; /* Γκρι */
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER-LEFT;
+    -fx-padding: 10 0 10 30;
+}
+
+/* Όταν περνάς το ποντίκι από πάνω */
+.menu-button:hover {
+    -fx-background-color: #1e293b;
+    -fx-text-fill: white;
+}
+
+
+/* ΤΟ ΕΝΕΡΓΟ ΚΟΥΜΠΙ (Highlighted) */
+.menu-button-active {
+    -fx-background-color: #1e293b; /* Το φόντο του ενεργού */
+    -fx-text-fill: white !important; /* Λευκά γράμματα */
+    -fx-border-color: #22c55e; /* Η πράσινη γραμμή */
+    -fx-border-width: 0 0 0 4; /* Μόνο αριστερά */
+}
+
+/* Αλλαγή χρώματος και για το εικονίδιο μέσα στο ενεργό κουμπί */
+.menu-button-active .ikonli-font-icon {
+    -fx-icon-color: #22c55e !important; /* Γίνονται πράσινα τα εικονίδια */
+}
