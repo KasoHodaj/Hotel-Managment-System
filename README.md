@@ -69,7 +69,7 @@ cd HotelManager-System
 4. Μετονομάστε το σε db.properties.
 5. Ανοίξτε το και συμπληρώστε τα δικά σας στοιχεία:
 ```bash
-*db.url=jdbc:postgresql://localhost:5432/to_onoma_tis_basis_sas
+db.url=jdbc:postgresql://localhost:5432/to_username_sas
 db.user=to_username_sas
 db.password=o_kodikos_sas
 ```
