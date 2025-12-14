@@ -56,3 +56,27 @@
 ```bash
 git clone [https://github.com/ToOnomaSou/HotelManager-System.git](https://github.com/ToOnomaSou/HotelManager-System.git)
 cd HotelManager-System
+```
+
+### 2. Ρύθμιση Βάσης Δεδομένων
+1. Δημιουργήστε μια βάση δεδομένων στην PostgreSQL.
+2. Εκτελέστε το script src/main/resources/schema.sql για να δημιουργηθούν οι πίνακες, οι Triggers και οι Procedures.
+
+### 3. Ρύθμιση Σύνδεσης
+1. Το αρχείο ρυθμίσεων της βάσης δεν συμπεριλαμβάνεται για λόγους ασφαλείας.
+2. Πηγαίνετε στον φάκελο src/main/resources.
+3. Βρείτε το αρχείο db.properties.example.
+4. Μετονομάστε το σε db.properties.
+5. Ανοίξτε το και συμπληρώστε τα δικά σας στοιχεία:
+```bash
+*db.url=jdbc:postgresql://localhost:5432/to_onoma_tis_basis_sas
+db.user=to_username_sas
+db.password=o_kodikos_sas
+```
+### 4. Εκτέλεση
+Ανοίξτε το project με IntelliJ IDEA και τρέξτε την κλάση HelloApplication.java.
+
+## Δημιουργός
+ΚΑΣΟ ΧΟΝΤΑΙ
+Φοιτητής Τμήματος Μηχανικών Πληροφορικής
+Μάθημα: Τεχνολογία Βάσεων Δεδομένων
