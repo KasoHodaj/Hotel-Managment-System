@@ -54,7 +54,7 @@
 
 ### 1. Κλωνοποίηση (Clone)
 ```bash
-git clone [https://github.com/ToOnomaSou/HotelManager-System.git](https://github.com/ToOnomaSou/HotelManager-System.git)
+git clone [https://github.com/KasoHodaj/Hotel-Managment-System.git](https://github.com/KasoHodaj/Hotel-Managment-System.git)
 cd HotelManager-System
 ```
 
@@ -77,8 +77,6 @@ db.password=o_kodikos_sas
 Ανοίξτε το project με IntelliJ IDEA και τρέξτε την κλάση HelloApplication.java.
 
 ## Δημιουργός
-ΚΑΣΟ ΧΟΝΤΑΙ
-
-Φοιτητής Τμήματος Μηχανικών Πληροφορικής
-
-Μάθημα: Τεχνολογία Βάσεων Δεδομένων
+* ΚΑΣΟ ΧΟΝΤΑΙ
+* Φοιτητής Τμήματος Μηχανικών Πληροφορικής.
+* Μάθημα: Τεχνολογία Βάσεων Δεδομένων.
