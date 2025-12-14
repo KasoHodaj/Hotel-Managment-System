@@ -139,8 +139,58 @@ CREATE TABLE app_logs (
     description TEXT,
     log_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+---------------------------------------------
+-- 1. Η συνάρτηση που καταγράφει την κίνηση
+CREATE OR REPLACE FUNCTION log_activity() RETURNS TRIGGER AS $$
+DECLARE
+    descText TEXT;
+BEGIN
+    -- Ανάλογα με την ενέργεια, φτιάχνουμε μια περιγραφή
+    IF (TG_OP = 'INSERT') THEN
+        descText := 'New entry added to ' || TG_TABLE_NAME;
+    ELSIF (TG_OP = 'UPDATE') THEN
+        descText := 'Updated entry in ' || TG_TABLE_NAME;
+    ELSIF (TG_OP = 'DELETE') THEN
+        descText := 'Deleted entry from ' || TG_TABLE_NAME;
+    END IF;
 
+    -- Καταγραφή στον πίνακα app_logs
+    INSERT INTO app_logs (action_type, table_name, description)
+    VALUES (TG_OP, TG_TABLE_NAME, descText);
 
+    RETURN NULL; -- Για AFTER triggers επιστρέφουμε NULL
+END;
+$$ LANGUAGE plpgsql;
+
+-- 2. Σύνδεση με ΟΛΟΥΣ τους πίνακες (Triggers)
+
+-- Clients
+DROP TRIGGER IF EXISTS t_log_clients ON clients;
+CREATE TRIGGER t_log_clients AFTER INSERT OR UPDATE OR DELETE ON clients FOR EACH ROW EXECUTE FUNCTION log_activity();
+
+-- Rooms
+DROP TRIGGER IF EXISTS t_log_rooms ON rooms;
+CREATE TRIGGER t_log_rooms AFTER INSERT OR UPDATE OR DELETE ON rooms FOR EACH ROW EXECUTE FUNCTION log_activity();
+
+-- Reservations
+DROP TRIGGER IF EXISTS t_log_reservations ON reservations;
+CREATE TRIGGER t_log_reservations AFTER INSERT OR UPDATE OR DELETE ON reservations FOR EACH ROW EXECUTE FUNCTION log_activity();
+
+-- Staff
+DROP TRIGGER IF EXISTS t_log_staff ON staff;
+CREATE TRIGGER t_log_staff AFTER INSERT OR UPDATE OR DELETE ON staff FOR EACH ROW EXECUTE FUNCTION log_activity();
+
+-- Suppliers
+DROP TRIGGER IF EXISTS t_log_suppliers ON suppliers;
+CREATE TRIGGER t_log_suppliers AFTER INSERT OR UPDATE OR DELETE ON suppliers FOR EACH ROW EXECUTE FUNCTION log_activity();
+
+-- Orders
+DROP TRIGGER IF EXISTS t_log_orders ON orders;
+CREATE TRIGGER t_log_orders AFTER INSERT OR UPDATE OR DELETE ON orders FOR EACH ROW EXECUTE FUNCTION log_activity();
+
+-- Tasks
+DROP TRIGGER IF EXISTS t_log_tasks ON tasks;
+CREATE TRIGGER t_log_tasks AFTER INSERT OR UPDATE OR DELETE ON tasks FOR EACH ROW EXECUTE FUNCTION log_activity();
 
 ---------------------------------------------
 
