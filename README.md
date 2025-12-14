@@ -4,7 +4,7 @@
 
 Το σύστημα αντικαθιστά τις παραδοσιακές μεθόδους καταγραφής με μια σύγχρονη, κανονικοποιημένη βάση δεδομένων, προσφέροντας αυτοματισμούς, ασφάλεια συναλλαγών και ευχρηστία.
 
-![Dashboard Screenshot](<img width="1297" height="798" alt="image" src="https://github.com/user-attachments/assets/5bf8515d-cc48-43da-9994-290143733423" />)
+![Dashboard Screenshot](src/main/resources/Assets/dashboard.png)
 
 
 ---
