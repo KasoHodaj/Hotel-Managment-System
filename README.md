@@ -1,4 +1,4 @@
-# 🏨 HotelManager System
+# HotelManager System
 
 Μια ολοκληρωμένη Desktop εφαρμογή διαχείρισης ξενοδοχειακής μονάδας, ανεπτυγμένη με **JavaFX** και **PostgreSQL**.
 
@@ -9,29 +9,29 @@
 
 ---
 
-## 🚀 Βασικές Λειτουργίες
+## Βασικές Λειτουργίες
 
-### 📊 Dashboard & Analytics
+### Dashboard & Analytics
 * **Real-time Στατιστικά:** Προβολή πληρότητας, ενεργών κρατήσεων και συνολικών πελατών.
 * **Activity Log:** Ζωντανή καταγραφή ενεργειών (Audit Trail) μέσω Database Triggers.
 * **Quick Actions:** Άμεση πρόσβαση στις συχνότερες λειτουργίες.
 
-### 🏨 Διαχείριση Κρατήσεων (Smart Booking)
+### Διαχείριση Κρατήσεων (Smart Booking)
 * **Δυναμική Διασύνδεση:** Επιλογή Πελάτη και Δωματίου από δυναμικές λίστες.
 * **Αυτόματος Υπολογισμός:** Αυτόματη κοστολόγηση βάσει ημερών και τιμής δωματίου.
 * **Status Lifecycle:** Υποστήριξη καταστάσεων (Active, Confirmed, Completed, Cancelled).
 
-### 👥 Πελατολόγιο & JSON
+### Πελατολόγιο & JSON
 * Πλήρης διαχείριση στοιχείων πελατών.
 * **Ημιδομημένα Δεδομένα:** Υποστήριξη ειδικών προτιμήσεων (Preferences) σε μορφή **JSON** (PostgreSQL feature).
 
-### 🛠️ Εργασίες & Προσωπικό
+### Εργασίες & Προσωπικό
 * **Task Management:** Λίστα To-Do με οπτική κωδικοποίηση για ολοκληρωμένες εργασίες.
 * **Διαχείριση Προσωπικού:** Ανάθεση ρόλων και βαρδιών με color-coded roles.
 
 ---
 
-## ⚙️ Τεχνολογίες & Αρχιτεκτονική
+## Τεχνολογίες & Αρχιτεκτονική
 
 * **Γλώσσα:** Java (JDK 17+)
 * **GUI Framework:** JavaFX (MVC Pattern)
@@ -39,7 +39,7 @@
 * **Object–Relational mapping:** JDBC με DAO Pattern
 * **Build Tool:** Maven
 
-### 🧠 Database Logic (Advanced Features)
+### Database Logic (Advanced Features)
 Η εφαρμογή αξιοποιεί πλήρως τις δυνατότητες του Database Server:
 1.  **Triggers:**
     * `log_activity`: Αυτόματη καταγραφή ιστορικού στο `app_logs` μετά από κάθε Insert/Update/Delete.
@@ -50,7 +50,7 @@
 
 ---
 
-## 🛠️ Εγκατάσταση & Εκτέλεση
+## Εγκατάσταση & Εκτέλεση
 
 ### 1. Κλωνοποίηση (Clone)
 ```bash
